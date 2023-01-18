@@ -3,7 +3,7 @@ import { Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { Body } from '@nestjs/common/decorators/http/route-params.decorator';
 import { Register } from 'src/typeorm';
-import { loginDto } from 'src/typeorm/loginDto';
+import { LoginDto } from 'src/typeorm/loginDto';
 
 @Controller('auth')
 export class AuthController {
@@ -14,7 +14,7 @@ export class AuthController {
   }
 
   @Post('login')
-  async login(@Body() loginDto: loginDto) {
+  async login(@Body() loginDto: LoginDto) {
     const result = await this.authService.login(loginDto);
     console.log(result);
     return result;

@@ -6,11 +6,12 @@ import { AuthController } from './auth/auth.controller';
 import { AuthService } from './auth/auth.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import entities from './typeorm';
-import { Repository } from 'typeorm';
 
+// main module of the application where all other modules and services must be registered.
 @Module({
   imports: [
     AuthModule,
+    // using typeorm for database connectivity and interaction
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
@@ -22,7 +23,7 @@ import { Repository } from 'typeorm';
       synchronize: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, AuthController],
+  providers: [AppService, AuthService],
 })
 export class AppModule {}
