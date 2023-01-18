@@ -23,7 +23,7 @@ import entities from './typeorm';
       synchronize: true,
     }),
   ],
-  controllers: [AppController, AuthController],
-  providers: [AppService, AuthService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
