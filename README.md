@@ -1,3 +1,11 @@
+A simple application made in react, nestjs and mysql for authenticating user.
+
+To setup this nest js project clone the project and run the following commands
+
+1. npm install
+2. npm run start
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
